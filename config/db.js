@@ -7,11 +7,14 @@ dotenv.config();
 const { Pool } = pkg;
 
 const pool = new Pool({
-    user: process.env.DB_USER,
-    host: process.env.DB_HOST,
-    database: process.env.DB_NAME,
-    password: process.env.DB_PASSWORD,
-    port: process.env.DB_PORT,
+    user: process.env.DB_USER_R,
+    host: process.env.DB_HOST_R,
+    database: process.env.DB_NAME_R,
+    password: process.env.DB_PASSWORD_R,
+    port: process.env.DB_PORT_R,
+    ssl:{
+        rejectUnauthorized: false,
+    }
 });
 
 // Create table sql statement (inside the query function)
