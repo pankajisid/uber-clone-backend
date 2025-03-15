@@ -9,7 +9,7 @@ const { Pool } = pkg;
 const pool = new Pool({
     user: process.env.DB_USER_R,
     host: process.env.DB_HOST_R,
-    database: process.env.DB_NAME_R,
+    database: process.env.DB_DATABASE_R,
     password: process.env.DB_PASSWORD_R,
     port: process.env.DB_PORT_R,
     ssl:{
